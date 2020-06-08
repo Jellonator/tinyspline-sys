@@ -3,8 +3,14 @@ name = "tinyspline-sys"
 version = "0.1.0"
 authors = ["Jocelyn Beedie <jellonator00@gmail.com>"]
 edition = "2018"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+description = "FFI bindings for Tinyspline"
+readme = "README.md"
+license = "MIT"
+homepage = "https://github.com/Jellonator/tinyspline-sys"
+repository = "https://github.com/Jellonator/tinyspline-sys"
+keywords = ["spline", "tinyspline", "bezier", "nurbs", "curve"]
+categories = ["external-ffi-bindings", "mathematics"]
+links = "libtinyspline"
 
 [build-dependencies]
 bindgen = "0.54.0"
