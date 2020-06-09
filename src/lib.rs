@@ -4,6 +4,8 @@
 
 use std::env;
 
+type size_t = usize;
+
 include!(concat!(env!("OUT_DIR"), "/bindings.rs"));
 
 #[cfg(test)]

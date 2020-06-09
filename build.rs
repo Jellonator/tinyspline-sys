@@ -20,6 +20,10 @@ fn main() {
         .header("tinyspline/src/tinyspline.h")
         .parse_callbacks(Box::new(bindgen::CargoCallbacks))
         .generate_comments(false)
+        // size_t is blacklisted because otherwise it will be set to either
+        // 'u64' or 'u32'. This results in code that isn't cross-compatible
+        // between platforms with different bit sizes.
+        .blacklist_type("size_t")
         .generate()
         .expect("Unable to generate bindings for tinyspline.");
     let out_path = PathBuf::from(env::var("OUT_DIR").unwrap());
